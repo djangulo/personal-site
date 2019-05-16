@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 
 import configureStore from './configureStore';
 
+import 'semantic-ui-css/semantic.min.css';
+
 import App from './App';
 
 const store = configureStore();
