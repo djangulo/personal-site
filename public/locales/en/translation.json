@@ -1,0 +1,13 @@
+{
+  "font_size": "Font size",
+  "home": "Home",
+  "lab": "Lab",
+  "language": "Language",
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "resume": "Resume",
+  "portfolio": "Portfolio",
+  "welcome_message": "Welcome to {{name}}'s personal site."
+}

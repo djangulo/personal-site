@@ -1,0 +1,7 @@
+{
+  "welcome_message": "Welcome to {{name}}'s personal site.",
+  "p1": "I'm a software developer focused mainly on web technologies, namely Python (with the Django framework) and JavaScript.",
+  "p2": "This website is a collection of the projects and work that I've done over the years.",
+  "p3_1": "See the",
+  "p3_2": "section if you want to see some of my finished work. If you're interested in seeing the latest toy project or concept I've been working on, head to the"
+}

@@ -1,0 +1,13 @@
+{
+  "font_size": "Tamaño de letra",
+  "home": "Inicio",
+  "lab": "Laboratorio",
+  "language": "Lenguaje",
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "resume": "Currículum",
+  "portfolio": "Portafolio",
+  "welcome_message": "Bienvenido as sitio personal de {{name}}."
+}

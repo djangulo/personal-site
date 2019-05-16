@@ -1,0 +1,7 @@
+{
+  "welcome_message": "Bienvenido al sitio personal de {{name}}.",
+  "p1": "Soy un desarrollador de software enfocado mayormente en tecnologías web, particularmente Python (con el framework Django) y JavaScript.",
+  "p2": "Este website es una colección de los proyectos y trabajos que he realizado a través de los años.",
+  "p3_1": "Vea la sección de",
+  "p3_2": "si quiere ver algunos de mis proyectos terminados. Si le interesa ver lo últimos conceptos que he estado trabajando, vaya al"
+}
