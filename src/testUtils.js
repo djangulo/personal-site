@@ -1,11 +1,13 @@
-import React from 'react';
-import { createStore } from 'redux';
-import { render } from 'react-testing-library';
-import { createMemoryHistory } from 'history';
-import { Router } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { rootReducer } from '../store';
-import { ThemeProvider } from 'emotion-theming';
+import React from "react";
+import { createStore } from "redux";
+import { render } from "react-testing-library";
+import { createMemoryHistory } from "history";
+import { Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import { rootReducer } from "./store";
+import { ThemeProvider } from "emotion-theming";
+
+import theme from "./theme";
 
 export const renderWithRedux = (
   ui,
@@ -21,7 +23,7 @@ export const renderWithRedux = (
 function renderWithRouter(
   ui,
   {
-    route = '/',
+    route = "/",
     history = createMemoryHistory({ initialEntries: [route] })
   } = {}
 ) {
@@ -38,7 +40,7 @@ export const renderWithReduxRouter = (
   ui,
   { initialState, store = createStore(rootReducer, initialState) } = {},
   {
-    route = '/',
+    route = "/",
     history = createMemoryHistory({ initialEntries: [route] })
   } = {}
 ) => ({
@@ -55,10 +57,10 @@ export const renderWithReduxRouter = (
 
 export const renderWithThemeReduxRouter = (
   ui,
-  theme = {},
+  theme = theme,
   { initialState, store = createStore(rootReducer, initialState) } = {},
   {
-    route = '/',
+    route = "/",
     history = createMemoryHistory({ initialEntries: [route] })
   } = {}
 ) => ({

@@ -1,36 +1,16 @@
-import React from 'react';
+import React from "react";
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
+import { jsx } from "@emotion/core";
+import { ThemeProvider } from "emotion-theming";
 
-import Root from './components/root';
-import { ViewModes } from './store';
+import Root from "./components/root";
+
+import theme from "./theme";
 
 function App() {
-  const appTheme = {
-    [ViewModes.DEFAULT]: {
-      colors: {
-        primary: '#c2185b',
-        primaryDark: '#8c0032',
-        secondary: '#ce93d8',
-        primaryText: '#ffffff',
-        secondaryText: '#0c0c0c',
-        highlight: '#d500f9'
-      }
-    },
-    [ViewModes.MONOCHROMATIC]: {
-      colors: {
-        primary: '#a1acb3',
-        secondary: '#ce93d8',
-        primaryText: '#ffffff',
-        secondaryText: '#0c0c0c',
-        highlight: '#d500f9'
-      }
-    }
-  };
   return (
-    <div className="App">
-      <ThemeProvider theme={appTheme}>
+    <div className='App'>
+      <ThemeProvider theme={theme}>
         <React.Suspense fallback={<div>Loading...</div>}>
           <Root />
         </React.Suspense>

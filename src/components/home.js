@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import { connect } from "react-redux";
 
+import { getColorPalette } from "./../theme";
+
 const Home = ({ t, uiState }) => {
   const Header1 = styled.h1`
     font-size: ${uiState.globalFontSize * 2}px;
@@ -12,9 +14,9 @@ const Home = ({ t, uiState }) => {
     font-size: ${uiState.globalFontSize}px;
   `;
   const Anchor = styled(Link)`
-    color: ${({ theme }) => theme[uiState.viewMode].colors.secondary};
+    color: ${() => getColorPalette(uiState.viewMode).secondary};
     &:hover {
-      color: ${({ theme }) => theme[uiState.viewMode].colors.primary};
+      color: ${({ theme }) => getColorPalette(uiState.viewMode).primary};
     }
   `;
 

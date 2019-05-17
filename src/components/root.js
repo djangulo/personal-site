@@ -6,16 +6,15 @@ import { NavLink, Redirect, Route, Switch } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import { getViewMode, getFontSize } from "../store";
 
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-import Home from './home';
+import { getColorPalette } from "../theme";
 
-const Root = ({ viewMode }) => {
-  const { t } = useTranslation('translation');
+import Home from "./home";
 
 const Root = ({ t, viewMode = "DEFAULT", fontSize = 16 }) => {
   const Header = styled.header`
-    background-color: ${({ theme }) => theme[viewMode].colors.primary};
+    background-color: ${() => getColorPalette(viewMode).primary};
     margin: 0;
     height: 4em;
     display: flex;
@@ -34,11 +33,11 @@ const Root = ({ t, viewMode = "DEFAULT", fontSize = 16 }) => {
     & li {
       list-style: none;
       & a {
-        color: ${({ theme }) => theme[viewMode].colors.primaryText};
+        color: ${() => getColorPalette(viewMode).primaryText};
         text-decoration: none;
         font-size: ${fontSize}px;
         &:hover {
-          color: ${({ theme }) => theme[viewMode].colors.secondary};
+          color: ${() => getColorPalette(viewMode).secondary};
         }
       }
     }
