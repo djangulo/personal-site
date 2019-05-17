@@ -1,21 +1,21 @@
 // QUACK! This is a duck. https://github.com/erikras/ducks-modular-redux
-import { ofType } from 'redux-observable';
-import { mergeMap } from 'rxjs/operators';
+import { ofType } from "redux-observable";
+import { mergeMap } from "rxjs/operators";
 
-import i18n from '../i18n';
+import i18n from "../i18n";
 
 // Actions
-export const TOGGLE_EDIT_MODE = 'TOGGLE_EDIT_MODE';
-export const SET_GLOBAL_FONT_SIZE = 'SET_GLOBAL_FONT_SIZE';
-export const SET_VIEW_MODE = 'SET_VIEW_MODE';
-export const SET_LANGUAGE = 'SET_LANGUAGE';
-export const TOGGLE_SETTINGS = 'TOGGLE_SETTINGS';
+export const TOGGLE_EDIT_MODE = "TOGGLE_EDIT_MODE";
+export const SET_GLOBAL_FONT_SIZE = "SET_GLOBAL_FONT_SIZE";
+export const SET_VIEW_MODE = "SET_VIEW_MODE";
+export const SET_LANGUAGE = "SET_LANGUAGE";
+export const TOGGLE_SETTINGS = "TOGGLE_SETTINGS";
 
 export const ViewModes = {
-  COLORBLIND: 'COLORBLIND',
-  MONOCHROMATIC: 'MONOCHROMATIC',
-  HIGH_CONTRAST: 'HIGH_CONTRAST',
-  DEFAULT: 'DEFAULT'
+  COLORBLIND: "COLORBLIND",
+  MONOCHROMATIC: "MONOCHROMATIC",
+  HIGH_CONTRAST: "HIGH_CONTRAST",
+  DEFAULT: "DEFAULT"
 };
 
 export const Languages = [
@@ -23,14 +23,14 @@ export const Languages = [
   // unchanged: name of language in original language
   // trans: string to pass to i18next.t()
   {
-    code: 'en',
-    unchanged: 'English',
-    trans: 'translation:languages.en'
+    code: "en",
+    unchanged: "English",
+    trans: "translation:languages.en"
   },
   {
-    code: 'es',
-    unchanged: 'Español',
-    trans: 'translation:languages.es'
+    code: "es",
+    unchanged: "Español",
+    trans: "translation:languages.es"
   }
 ];
 
@@ -75,6 +75,7 @@ export const setLanguageEpic = action$ =>
 
 // Selectors
 export const getViewMode = state => state.ui.viewMode;
+export const getFontSize = state => state.ui.globalFontSize;
 
 // Reducer
 const reducer = (state = initialState, action = {}) => {

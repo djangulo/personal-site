@@ -22,30 +22,30 @@ const Home = ({ t, uiState }) => {
 
   return (
     <main>
-      <Header1>{t('home:welcome_message', { name: 'Denis Angulo' })}</Header1>
+      <Header1>{t("home:welcome_message", { name: "Denis Angulo" })}</Header1>
       <Paragraph>
         {t(
-          'home:p1',
+          "home:p1",
           "I'm a software developer focused mainly on web technologies, namely Python (with the Django framework) and JavaScript."
         )}
       </Paragraph>
       <Paragraph>
         {t(
-          'home:p2',
+          "home:p2",
           "This website is a collection of the projects and work that I've done over the years."
         )}
       </Paragraph>
       <Paragraph>
-        {t('home:p3_1', 'See the')}{' '}
-        <Anchor to="/portfolio">
-          {t('translation:portfolio', 'Portfolio')}
-        </Anchor>{' '}
+        {t("home:p3_1", "See the")}{" "}
+        <Anchor to='/portfolio'>
+          {t("translation:portfolio", "Portfolio")}
+        </Anchor>{" "}
         {t(
-          'home:p3_2',
+          "home:p3_2",
           "section if you want to see some of my finished work. If you're interested in seeing the latest toy project or concept I've been working on, head to the"
         )}
-        <Anchor to="/lab"> {t('translation:lab', 'Lab')}</Anchor>
-        {'.'}
+        <Anchor to='/lab'> {t("translation:lab", "Lab")}</Anchor>
+        {"."}
       </Paragraph>
     </main>
   );
