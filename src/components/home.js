@@ -1,11 +1,10 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
+import React from "react";
+import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
+import { withTranslation } from "react-i18next";
+import { connect } from "react-redux";
 
-const Home = ({ uiState }) => {
-  const { t } = useTranslation(['translation', 'home']);
+const Home = ({ t, uiState }) => {
   const Header1 = styled.h1`
     font-size: ${uiState.globalFontSize * 2}px;
   `;
@@ -50,4 +49,6 @@ const Home = ({ uiState }) => {
   );
 };
 
-export default connect(state => ({ uiState: state.ui }))(Home);
+export default connect(state => ({ uiState: state.ui }))(
+  withTranslation("home")(Home)
+);
